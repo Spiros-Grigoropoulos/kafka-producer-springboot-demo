@@ -1,6 +1,6 @@
-This is a sample application for a Kafka Consumer in Springboot
+This is a sample application for a Kafka Producer in Springboot
 
-The application creates a REST endpoint "/v1/cartEvent" where it expects to get Json with the following schema:
+The application creates a REST endpoint "/v1/cartEvent" where it expects to get a JSON body through a POST call with the following schema:
 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -9,7 +9,6 @@ The application creates a REST endpoint "/v1/cartEvent" where it expects to get 
     "cartEventType": {
       "type": "string",
       "enum": ["PAID", "ADD", "REMOVED", "CHECKOUT_START", "CHECKOUT_CANCEL"]
-    
     },
     "cartId": {
       "type": "integer"
@@ -45,7 +44,7 @@ The application creates a REST endpoint "/v1/cartEvent" where it expects to get 
   "required": ["cartEventType", "cartId", "product", "sessionId", "userID"]
 }
 
-As an example a Json like is accepted:
+As an example a JSON like is accepted:
 
 {
     "cartEventType": "ADD",
