@@ -9,7 +9,6 @@ The application creates a REST endpoint "/v1/cartEvent" where it expects to get 
     "cartEventType": {
       "type": "string",
       "enum": ["PAID", "ADD", "REMOVED", "CHECKOUT_START", "CHECKOUT_CANCEL"]
-    
     },
     "cartId": {
       "type": "integer"
@@ -46,7 +45,6 @@ The application creates a REST endpoint "/v1/cartEvent" where it expects to get 
 }
 
 As an example a Json like is accepted:
-
 {
     "cartEventType": "ADD",
     "cartId": 17869084,
